@@ -18,6 +18,7 @@
     height: 100vh;
     max-width: 280px;
     overflow: hidden;
+    overflow-y: scroll;
     color: #ffffffe0;
     background: #091334f0;
 
@@ -65,6 +66,7 @@
             font-size: 1em;
             font-weight: 400;
             text-align: center;
+            color: #aeb4c5a8;
           }
         }
       }
@@ -73,18 +75,34 @@
     .body {
       padding: 0 10px;
       h2 {
-        font-size: 1.3em;
-        font-weight: 600;
-        color: rgb(85 121 240);
+        font-size: 18px;
+        font-weight: 500;
+        color: rgb(131 139 246);
+        text-shadow: 0px 0.2px rgb(2 18 207);
       }
       h3 {
         font-size: 0.8em;
         color: #c5c1c1;
       }
-      .dashboard-links{
-        .active{
-            background: #ffffff36;
-            border-radius: 3px;
+      .dashboard-links,
+      .second-dashboard-links {
+        .single-link {
+          margin: 30px 0 0 0;
+          padding: 10px 0 10px 10px;
+          svg {
+            width: 26px;
+            height: 25px;
+            margin: 0px 15px 0 0;
+          }
+          span {
+            color: #ffffffcf;
+            font-weight: 500;
+          }
+        }
+        .active {
+          color: #fff !important;
+          background: #ffffff36;
+          border-radius: 3px;
         }
       }
     }
@@ -92,4 +110,24 @@
 }
 .right-section {
   width: 85%;
+  nav {
+    .navbar-toggler-icon {
+      width: 1.6em;
+      height: 1.6em;
+    }
+    .right-nav-section{
+      gap: 15px;
+      width: 27%;
+      display: flex;
+      
+      span{
+        width: 15%;
+        cursor: pointer;
+
+        &span{
+          background-color: blue;
+        }
+      }
+    }
+  }
 }
