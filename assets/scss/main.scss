@@ -1,5 +1,6 @@
 * {
   list-style: none;
+  border: none;
   a {
     text-decoration: none;
   }
@@ -108,6 +109,7 @@
     }
   }
 }
+
 .right-section {
   width: 85%;
   nav {
@@ -115,19 +117,301 @@
       width: 1.6em;
       height: 1.6em;
     }
-    .right-nav-section{
+    .right-nav-section {
       gap: 15px;
-      width: 27%;
+      width: 180px;
+      height: 20px;
       display: flex;
-      
-      span{
+
+      span {
         width: 15%;
         cursor: pointer;
 
-        &span{
+        &span {
           background-color: blue;
         }
       }
     }
+  }
+
+  .hero-section {
+    gap: 15px;
+    width: 100%;
+    display: flex;
+    padding: 55px 12px;
+    flex-flow: wrap row;
+    align-items: center;
+    justify-content: space-between;
+
+    .inner-left-section {
+      width: 45%;
+      text-overflow: ellipsis;
+
+      .my-pic {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 12px;
+
+        img {
+          border-radius: 70px;
+        }
+        ul {
+          width: 65%;
+          margin: 0px;
+
+          li {
+            h2,
+            h4 {
+              overflow: hidden !important;
+              text-overflow: ellipsis !important;
+              white-space: nowrap !important;
+            }
+            h2 {
+              color: #000;
+              font-size: 25px;
+              font-weight: 645;
+              letter-spacing: 0.1px;
+            }
+            h4 {
+              font-size: 16px;
+              color: #767676;
+              font-weight: 450;
+
+              span {
+                svg {
+                  width: 25px;
+                  height: 25px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .inner-right-section {
+      .message-btn-primary {
+        color: #fff;
+        font-weight: 600;
+        background: rgba(15, 28, 193, 0.6705882353);
+        background-color: rgba(15, 28, 193, 0.6705882353);
+
+        svg {
+          width: 25px;
+          height: 19px;
+          padding-right: 2px;
+        }
+      }
+      .btn-dark {
+        font-weight: 600;
+        svg {
+          width: 32px;
+          height: 22px;
+        }
+      }
+    }
+  }
+
+  .body-nav {
+    li button {
+      font-size: 1.1em;
+      color: #00000088;
+      font-weight: 500;
+    }
+    .contact-tab-three {
+      padding: 8px 22.88px;
+    }
+    .active {
+      color: #6f63d4;
+      background-color: #f2f5f9;
+      border: none;
+      border-bottom: 2.5px solid #6f63d4;
+    }
+  }
+  .tab-content > .active {
+    background: #f2f5f9;
+    background-color: #f2f5f9;
+  }
+  //Summery
+  .summery {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    flex-flow: wrap row;
+    align-content: center;
+    justify-content: space-around;
+
+    .h5-card-title {
+      display: flex;
+      font-size: 15px;
+      align-items: center;
+      flex-flow: wrap row;
+      align-content: center;
+      justify-content: space-between;
+
+      span {
+        width: 31px;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 500px;
+        padding: 5px 0px 5px 0px;
+        transition: background 0.3s ease-in-out;
+
+        svg {
+          width: 22px;
+          height: 20px;
+        }
+      }
+      span:hover {
+        background: #00000026;
+        background-color: #00000026;
+      }
+    }
+
+    ul {
+      li {
+        margin: 0 0 18px 0;
+
+        h2 {
+          margin: 0;
+          padding: 0;
+          font-size: 55px;
+          font-weight: 500;
+        }
+        h4 {
+          font-size: 15px;
+          font-weight: 645;
+        }
+        h5 {
+          font-size: 16px;
+          font-weight: 500;
+          color: #00000099;
+        }
+      }
+    }
+    .first-ul {
+      h2 {
+        color: #3772f7d9;
+      }
+      h4 {
+        color: #3772f7d9;
+      }
+    }
+    .second-ul {
+      h2 {
+        color: #9ae971fa;
+      }
+      h4 {
+        color: #87cd63;
+      }
+    }
+    .third-ul {
+      h2 {
+        color: #f7da37d9;
+      }
+      h4 {
+        color: rgb(219 193 48 / 85%);
+      }
+    }
+    .fourth-ul {
+      h2 {
+        color: #f73737d9;
+      }
+      h4 {
+        color: #d52e2ed9;
+      }
+    }
+  }
+
+  // graph-section
+  .graph-section {
+    background: #fff;
+    padding: 20px;
+    margin: 18px 0 0 0;
+    border-radius: 10px;
+    background-color: #fff;
+
+    .graph-section-nav {
+      display: flex;
+      flex-flow: wrap row;
+      align-items: center;
+      align-content: center;
+      justify-content: space-between;
+      h3 {
+        font-size: 17px;
+        font-weight: 500;
+      }
+    }
+
+    .graph-summery-wrapper{
+      max-width: 100%;
+
+      #myChartCanvas{
+        width: 100% !important;
+        max-width: 100%;
+      }
+    }
+
+    .right-graph-section {
+      display: grid;
+      grid-gap: 5px;
+      text-align: center;
+      grid-template-areas:
+        "new-issues new-issues closed-issues closed-issues"
+        "fixed-issues won-issues re-opened evaluate-issues";
+
+      div {
+        padding: 20px 0;
+        border-radius: 9px;
+        color: #000000a3;
+        background: #242a5017;
+        background-color: #242a5017;
+        h2 {
+          font-weight: 700;
+          font-size: 35px;
+        }
+        h3 {
+          font-size: 15px;
+        }
+      }
+
+      .newIssues {
+        font-weight: 900;
+        color: #0f1cc1ab;
+        grid-area: new-issues;
+        background: #0f1cc1ab;
+        background-color: #0f1cc126;
+      }
+      .closedIssues {
+        color: #34b7f5;
+        background: #7cd5ff26;
+        grid-area: closed-issues;
+        background-color : #7cd5ff26;
+      }
+      .fixedIssues {
+        grid-area: fixed-issues;
+      }
+      .wonIssues {
+        grid-area: won-issues;
+      }
+      .re-openedIssues {
+        grid-area: re-opened;
+      }
+      .revaluateIssues {
+        grid-area: evaluate-issues;
+      }
+    }
+  }
+}
+
+// media Queries
+@media (min-width: 992px) {
+  .col-lg-2 {
+    flex: 0 0 auto;
+    width: 24%;
   }
 }
