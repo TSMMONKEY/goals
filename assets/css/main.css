@@ -1,5 +1,6 @@
 * {
   list-style: none;
+  border: none;
 }
 * a {
   text-decoration: none;
@@ -282,13 +283,13 @@
 }
 .right-section .graph-section {
   background: #fff;
+  padding: 20px;
   margin: 18px 0 0 0;
   border-radius: 10px;
   background-color: #fff;
 }
 .right-section .graph-section .graph-section-nav {
   display: flex;
-  padding: 15px 17px;
   flex-flow: wrap row;
   align-items: center;
   align-content: center;
@@ -297,6 +298,58 @@
 .right-section .graph-section .graph-section-nav h3 {
   font-size: 17px;
   font-weight: 500;
+}
+.right-section .graph-section .graph-summery-wrapper {
+  max-width: 100%;
+}
+.right-section .graph-section .graph-summery-wrapper #myChartCanvas {
+  width: 100% !important;
+  max-width: 100%;
+}
+.right-section .graph-section .right-graph-section {
+  display: grid;
+  grid-gap: 5px;
+  text-align: center;
+  grid-template-areas: "new-issues new-issues closed-issues closed-issues" "fixed-issues won-issues re-opened evaluate-issues";
+}
+.right-section .graph-section .right-graph-section div {
+  padding: 20px 0;
+  border-radius: 9px;
+  color: rgba(0, 0, 0, 0.6392156863);
+  background: rgba(36, 42, 80, 0.0901960784);
+  background-color: rgba(36, 42, 80, 0.0901960784);
+}
+.right-section .graph-section .right-graph-section div h2 {
+  font-weight: 700;
+  font-size: 35px;
+}
+.right-section .graph-section .right-graph-section div h3 {
+  font-size: 15px;
+}
+.right-section .graph-section .right-graph-section .newIssues {
+  font-weight: 900;
+  color: rgba(15, 28, 193, 0.6705882353);
+  grid-area: new-issues;
+  background: rgba(15, 28, 193, 0.6705882353);
+  background-color: rgba(15, 28, 193, 0.1490196078);
+}
+.right-section .graph-section .right-graph-section .closedIssues {
+  color: #34b7f5;
+  background: rgba(124, 213, 255, 0.1490196078);
+  grid-area: closed-issues;
+  background-color: rgba(124, 213, 255, 0.1490196078);
+}
+.right-section .graph-section .right-graph-section .fixedIssues {
+  grid-area: fixed-issues;
+}
+.right-section .graph-section .right-graph-section .wonIssues {
+  grid-area: won-issues;
+}
+.right-section .graph-section .right-graph-section .re-openedIssues {
+  grid-area: re-opened;
+}
+.right-section .graph-section .right-graph-section .revaluateIssues {
+  grid-area: evaluate-issues;
 }
 
 @media (min-width: 992px) {

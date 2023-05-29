@@ -1,27 +1,51 @@
-  (async function() {
+(async function() {
     const data = [
-      { year: 2010, count: 10 },
-      { year: 2011, count: 20 },
-      { year: 2012, count: 15 },
-      { year: 2013, count: 25 },
-      { year: 2014, count: 22 },
-      { year: 2015, count: 30 },
-      { year: 2016, count: 28 },
+      { Day: 'Mon', count: 100, revenue: 1000 },
+      { Day: 'Tue', count: 200, revenue: 2000 },
+      { Day: 'Wed', count: 150, revenue: 1500 },
+      { Day: 'Thu', count: 244, revenue: 2500 },
+      { Day: 'Fri', count: 220, revenue: 2200 },
+      { Day: 'Sat', count: 355, revenue: 3000 },
+      { Day: 'Sun', count: 883, revenue: 2800 },
+      // Add more data points for the bar graph
+    //   { Day: 2017, count: 182, revenue: 1800 },
+    //   { Day: 2018, count: 120, revenue: 1200 },
+    //   { Day: 2019, count: 202, revenue: 2400 },
+      // ...
     ];
-
+  
     new Chart(
       document.getElementById('myChartCanvas'),
       {
         type: 'bar',
         data: {
-          labels: data.map(row => row.year),
+          labels: data.map(row => row.Day),
           datasets: [
             {
-              label: 'Acquisitions by year',
-              data: data.map(row => row.count)
+              label: 'Acquisitions by Day',
+              data: data.map(row => row.count),
+              backgroundColor: 'rgba(75, 192, 192, 0.2)',
+              borderColor: 'rgba(75, 192, 192, 1)',
+              borderWidth: 1
+            },
+            {
+              label: 'Revenue by Day',
+              data: data.map(row => row.revenue),
+              type: 'line',
+              fill: false,
+              borderColor: 'purple',
+              tension: 0.1
             }
           ]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
         }
       }
     );
   })();
+  

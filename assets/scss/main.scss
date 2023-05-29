@@ -1,5 +1,6 @@
 * {
   list-style: none;
+  border: none;
   a {
     text-decoration: none;
   }
@@ -329,20 +330,79 @@
   // graph-section
   .graph-section {
     background: #fff;
+    padding: 20px;
     margin: 18px 0 0 0;
     border-radius: 10px;
     background-color: #fff;
 
     .graph-section-nav {
       display: flex;
-      padding: 15px 17px;
       flex-flow: wrap row;
       align-items: center;
       align-content: center;
       justify-content: space-between;
-      h3{
+      h3 {
         font-size: 17px;
         font-weight: 500;
+      }
+    }
+
+    .graph-summery-wrapper{
+      max-width: 100%;
+
+      #myChartCanvas{
+        width: 100% !important;
+        max-width: 100%;
+      }
+    }
+
+    .right-graph-section {
+      display: grid;
+      grid-gap: 5px;
+      text-align: center;
+      grid-template-areas:
+        "new-issues new-issues closed-issues closed-issues"
+        "fixed-issues won-issues re-opened evaluate-issues";
+
+      div {
+        padding: 20px 0;
+        border-radius: 9px;
+        color: #000000a3;
+        background: #242a5017;
+        background-color: #242a5017;
+        h2 {
+          font-weight: 700;
+          font-size: 35px;
+        }
+        h3 {
+          font-size: 15px;
+        }
+      }
+
+      .newIssues {
+        font-weight: 900;
+        color: #0f1cc1ab;
+        grid-area: new-issues;
+        background: #0f1cc1ab;
+        background-color: #0f1cc126;
+      }
+      .closedIssues {
+        color: #34b7f5;
+        background: #7cd5ff26;
+        grid-area: closed-issues;
+        background-color : #7cd5ff26;
+      }
+      .fixedIssues {
+        grid-area: fixed-issues;
+      }
+      .wonIssues {
+        grid-area: won-issues;
+      }
+      .re-openedIssues {
+        grid-area: re-opened;
+      }
+      .revaluateIssues {
+        grid-area: evaluate-issues;
       }
     }
   }
