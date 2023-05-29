@@ -13,6 +13,9 @@
     <!-- Css -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <!-- End Of Css -->
+
+    <!-- Chart.js script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <section class="container-fluid main-container">
@@ -858,13 +861,173 @@
 
         <!-- Hero Section -->
         <div class="hero-section">
-          <section class="inner-left-section">left</section>
-          <section class="inner-right-section">right</section>
+          <section class="inner-left-section">
+            <div class="my-pic">
+              <img src="/assets/images/my-pic.png" alt="" />
+              <ul>
+                <li>
+                  <h2>Welcome back, Thabani!</h2>
+                  <h4>
+                    <span>
+                      <svg
+                        viewBox="0 0 32 32"
+                        id="svg5"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:svg="http://www.w3.org/2000/svg"
+                        fill="#000000"
+                      >
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <defs id="defs2"></defs>
+                          <g id="layer1" transform="translate(-300,-100)">
+                            <path
+                              d="m 316,102 c -2.19729,0 -4,1.80271 -4,4 a 1.000095,1.000095 0 0 0 0,0.006 c 0.004,0.67668 0.17824,1.34193 0.50977,1.93359 a 0.99999499,0.99999499 0 0 0 1.36132,0.38477 0.99999499,0.99999499 0 0 0 0.38477,-1.36133 c -0.16483,-0.29418 -0.25322,-0.62618 -0.25586,-0.96484 10e-4,-1.11548 0.88425,-1.99805 2,-1.99805 1.11575,0 1.99896,0.88257 2,1.99805 -0.003,0.33518 -0.0889,0.66415 -0.25195,0.95703 a 0.99999499,0.99999499 0 0 0 0.38672,1.35937 0.99999499,0.99999499 0 0 0 1.35937,-0.38672 c 0.32737,-0.5879 0.50179,-1.249 0.50586,-1.92187 A 1.000095,1.000095 0 0 0 320,106 c 0,-2.19729 -1.80271,-4 -4,-4 z"
+                              id="path22520"
+                              style="
+                                color: #9e9e9e;
+                                fill: #9e9e9e;
+                                fill-rule: evenodd;
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                                stroke-miterlimit: 4.1;
+                                -inkscape-stroke: none;
+                              "
+                            ></path>
+                            <path
+                              d="m 316,106 c -4.95872,0 -9,4.04128 -9,9 v 6 c -1.6447,0 -3,1.3553 -3,3 0,1.6447 1.3553,3 3,3 h 18 c 1.6447,0 3,-1.3553 3,-3 0,-1.6447 -1.3553,-3 -3,-3 v -6 c 0,-4.95872 -4.04128,-9 -9,-9 z m 0,2 c 3.87783,0 7,3.12217 7,7 v 7 a 1.000105,1.000105 0 0 0 1,1 h 1 c 0.57127,0 1,0.42873 1,1 0,0.57127 -0.42873,1 -1,1 h -18 c -0.57127,0 -1,-0.42873 -1,-1 0,-0.57127 0.42873,-1 1,-1 h 1 a 1.000105,1.000105 0 0 0 1,-1 v -7 c 0,-3.87783 3.12217,-7 7,-7 z"
+                              id="rect22470"
+                              style="
+                                color: #9e9e9e;
+                                fill: #9e9e9e;
+                                fill-rule: evenodd;
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                                stroke-miterlimit: 4.1;
+                                -inkscape-stroke: none;
+                              "
+                            ></path>
+                            <path
+                              d="m 311,128 a 1,1 0 0 0 -1,1 1,1 0 0 0 1,1 h 10 a 1,1 0 0 0 1,-1 1,1 0 0 0 -1,-1 z"
+                              id="path22489"
+                              style="
+                                color: #9e9e9e;
+                                fill: #9e9e9e;
+                                fill-rule: evenodd;
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                                stroke-miterlimit: 4.1;
+                                -inkscape-stroke: none;
+                              "
+                            ></path>
+                            <path
+                              d="m 324.57227,105.26172 a 1,1 0 0 0 -1.41211,0.0879 1,1 0 0 0 0.0879,1.41211 c 1.85845,1.63946 3.16702,3.8864 3.59765,6.41016 a 1,1 0 0 0 1.1543,0.81835 1,1 0 0 0 0.81641,-1.15429 c -0.51035,-2.9909 -2.05478,-5.64284 -4.24414,-7.57422 z"
+                              id="path22577"
+                              style="
+                                color: #9e9e9e;
+                                fill: #9e9e9e;
+                                fill-rule: evenodd;
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                                stroke-miterlimit: 4.1;
+                                -inkscape-stroke: none;
+                              "
+                            ></path>
+                            <path
+                              d="m 308.16211,105.00586 a 1,1 0 0 0 -0.72461,0.24805 c -2.19473,1.93225 -3.74518,4.58811 -4.25586,7.58398 a 1,1 0 0 0 0.81836,1.1543 1,1 0 0 0 1.1543,-0.81836 c 0.43092,-2.52795 1.74062,-4.77787 3.60351,-6.41797 a 1,1 0 0 0 0.0899,-1.41211 1,1 0 0 0 -0.68555,-0.33789 z"
+                              id="rect22564"
+                              style="
+                                color: #9e9e9e;
+                                fill: #9e9e9e;
+                                fill-rule: evenodd;
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                                stroke-miterlimit: 4.1;
+                                -inkscape-stroke: none;
+                              "
+                            ></path>
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                    You have 2 new messages and 15 new tasks
+                  </h4>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="inner-right-section">
+            <button type="button" class="btn message-btn-primary">
+              <span
+                ><svg
+                  fill="#ffffff"
+                  viewBox="0 0 1920 1920"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#ffffff"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M0 1694.235h1920V226H0v1468.235ZM112.941 376.664V338.94H1807.06v37.723L960 1111.233l-847.059-734.57ZM1807.06 526.198v950.513l-351.134-438.89-88.32 70.475 378.353 472.998H174.042l378.353-472.998-88.32-70.475-351.134 438.89V526.198L960 1260.768l847.059-734.57Z"
+                      fill-rule="evenodd"
+                    ></path>
+                  </g></svg></span
+              >Messages
+            </button>
+            <button type="button" class="btn btn-dark">
+              <span
+                ><svg
+                  viewBox="0 0 512 512"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  fill="#ffffff"
+                  stroke="#ffffff"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>tasks-open</title>
+                    <g
+                      id="Page-1"
+                      stroke="none"
+                      stroke-width="1"
+                      fill="none"
+                      fill-rule="evenodd"
+                    >
+                      <g
+                        id="Combined-Shape"
+                        fill="#ffffff"
+                        transform="translate(85.333333, 42.666667)"
+                      >
+                        <path
+                          d="M1.42108547e-14,7.10542736e-15 L106.666667,7.10542736e-15 L106.666667,106.666667 L1.42108547e-14,106.666667 L1.42108547e-14,7.10542736e-15 Z M32,32 L32,74.6666667 L74.6666667,74.6666667 L74.6666667,32 L32,32 Z M170.666667,42.6666667 L341.333333,42.6666667 L341.333333,85.3333333 L170.666667,85.3333333 L170.666667,42.6666667 Z M1.42108547e-14,149.333333 L106.666667,149.333333 L106.666667,256 L1.42108547e-14,256 L1.42108547e-14,149.333333 Z M32,181.333333 L32,224 L74.6666667,224 L74.6666667,181.333333 L32,181.333333 Z M170.666667,192 L341.333333,192 L341.333333,234.666667 L170.666667,234.666667 L170.666667,192 Z M1.42108547e-14,298.666667 L106.666667,298.666667 L106.666667,405.333333 L1.42108547e-14,405.333333 L1.42108547e-14,298.666667 Z M32,330.666667 L32,373.333333 L74.6666667,373.333333 L74.6666667,330.666667 L32,330.666667 Z M170.666667,341.333333 L341.333333,341.333333 L341.333333,384 L170.666667,384 L170.666667,341.333333 Z"
+                        ></path>
+                      </g>
+                    </g>
+                  </g></svg></span
+              >Tasks
+            </button>
+          </section>
         </div>
         <!-- End Of Hero Section -->
 
         <!-- Body -->
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <ul class="nav nav-tabs body-nav" id="myTab" role="tablist">
           <li class="nav-item" role="presentation">
             <button
               class="nav-link active"
@@ -890,12 +1053,12 @@
               aria-controls="profile-tab-pane"
               aria-selected="false"
             >
-              Profile
+              Budget
             </button>
           </li>
           <li class="nav-item" role="presentation">
             <button
-              class="nav-link"
+              class="nav-link contact-tab-three"
               id="contact-tab"
               data-bs-toggle="tab"
               data-bs-target="#contact-tab-pane"
@@ -904,26 +1067,12 @@
               aria-controls="contact-tab-pane"
               aria-selected="false"
             >
-              Contact
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              class="nav-link"
-              id="disabled-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#disabled-tab-pane"
-              type="button"
-              role="tab"
-              aria-controls="disabled-tab-pane"
-              aria-selected="false"
-              disabled
-            >
-              Disabled
+              Team
             </button>
           </li>
         </ul>
         <div class="tab-content" id="myTabContent">
+          <!-- Home -->
           <div
             class="tab-pane fade show active"
             id="home-tab-pane"
@@ -931,8 +1080,290 @@
             aria-labelledby="home-tab"
             tabindex="0"
           >
-            ...
+            <div class="container-fluid">
+              <section class="summery">
+                <div class="col-sm-6 col-lg-2 mb-3 mb-sm-0 first-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title h5-card-title">
+                        Summary
+                        <span>
+                          <svg
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            stroke="#4a4a4a"
+                            stroke-width="1"
+                            stroke-linecap="round"
+                            stroke-linejoin="miter"
+                          >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                              id="SVGRepo_tracerCarrier"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                              <line
+                                x1="11.99"
+                                y1="6"
+                                x2="12"
+                                y2="6"
+                                stroke-linecap="round"
+                                stroke-width="2"
+                              ></line>
+                              <line
+                                x1="11.99"
+                                y1="12"
+                                x2="12"
+                                y2="12"
+                                stroke-linecap="round"
+                                stroke-width="2"
+                              ></line>
+                              <line
+                                x1="11.99"
+                                y1="18"
+                                x2="12"
+                                y2="18"
+                                stroke-linecap="round"
+                                stroke-width="2"
+                              ></line>
+                            </g>
+                          </svg>
+                        </span>
+                      </h5>
+                      <ul class="first-ul">
+                        <li>
+                          <h2>21</h2>
+                          <h4>Due Tasks</h4>
+                        </li>
+                        <li>
+                          <h5>Complete: 13</h5>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-2 second-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title h5-card-title">
+                        Overdue
+                        <span>
+                          <svg
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            stroke="#4a4a4a"
+                            stroke-width="1"
+                            stroke-linecap="round"
+                            stroke-linejoin="miter"
+                          >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                              id="SVGRepo_tracerCarrier"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                              <line
+                                x1="11.99"
+                                y1="6"
+                                x2="12"
+                                y2="6"
+                                stroke-linecap="round"
+                                stroke-width="2"
+                              ></line>
+                              <line
+                                x1="11.99"
+                                y1="12"
+                                x2="12"
+                                y2="12"
+                                stroke-linecap="round"
+                                stroke-width="2"
+                              ></line>
+                              <line
+                                x1="11.99"
+                                y1="18"
+                                x2="12"
+                                y2="18"
+                                stroke-linecap="round"
+                                stroke-width="2"
+                              ></line>
+                            </g>
+                          </svg>
+                        </span>
+                      </h5>
+                      <ul class="second-ul">
+                        <li>
+                          <h2>25</h2>
+                          <h4>Due Tasks</h4>
+                        </li>
+                        <li>
+                          <h5>Complete: 3</h5>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-2 third-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title h5-card-title">
+                        Issues
+                        <span>
+                          <svg
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            stroke="#4a4a4a"
+                            stroke-width="1"
+                            stroke-linecap="round"
+                            stroke-linejoin="miter"
+                          >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                              id="SVGRepo_tracerCarrier"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                              <line
+                                x1="11.99"
+                                y1="6"
+                                x2="12"
+                                y2="6"
+                                stroke-linecap="round"
+                                stroke-width="2"
+                              ></line>
+                              <line
+                                x1="11.99"
+                                y1="12"
+                                x2="12"
+                                y2="12"
+                                stroke-linecap="round"
+                                stroke-width="2"
+                              ></line>
+                              <line
+                                x1="11.99"
+                                y1="18"
+                                x2="12"
+                                y2="18"
+                                stroke-linecap="round"
+                                stroke-width="2"
+                              ></line>
+                            </g>
+                          </svg>
+                        </span>
+                      </h5>
+                      <ul class="third-ul">
+                        <li>
+                          <h2>60</h2>
+                          <h4>Due Tasks</h4>
+                        </li>
+                        <li>
+                          <h5>Complete: 28</h5>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-2 fourth-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title h5-card-title">
+                        Features
+                        <span>
+                          <svg
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            stroke="#4a4a4a"
+                            stroke-width="1"
+                            stroke-linecap="round"
+                            stroke-linejoin="miter"
+                          >
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g
+                              id="SVGRepo_tracerCarrier"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></g>
+                            <g id="SVGRepo_iconCarrier">
+                              <line
+                                x1="11.99"
+                                y1="6"
+                                x2="12"
+                                y2="6"
+                                stroke-linecap="round"
+                                stroke-width="2"
+                              ></line>
+                              <line
+                                x1="11.99"
+                                y1="12"
+                                x2="12"
+                                y2="12"
+                                stroke-linecap="round"
+                                stroke-width="2"
+                              ></line>
+                              <line
+                                x1="11.99"
+                                y1="18"
+                                x2="12"
+                                y2="18"
+                                stroke-linecap="round"
+                                stroke-width="2"
+                              ></line>
+                            </g>
+                          </svg>
+                        </span>
+                      </h5>
+                      <ul class="fourth-ul">
+                        <li>
+                          <h2>12</h2>
+                          <h4>Due Tasks</h4>
+                        </li>
+                        <li>
+                          <h5>Complete: 19</h5>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- Graph Section -->
+              <section class="graph-section">
+                <div class="graph-section-nav">
+                  <h3>Github Issues Summary</h3>
+                  <section class="buttons">
+                    <button type="button" class="btn btn-outline-primary">
+                      Last Week
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary">
+                      This Week
+                    </button>
+                  </section>
+                </div>
+
+                <div class="left-graph-section">
+                  <h3>New vs Closed</h3>
+                  <div style="width: 800px">
+                    <canvas id="myChartCanvas"></canvas>
+                  </div>
+                </div>
+
+                <div class="right-graph-section"></div>
+              </section>
+              <!-- last Graph Section -->
+              <section class="task-graph">
+                <div class="left-task-section"></div>
+                <div class="right-task-section"></div>
+              </section>
+            </div>
           </div>
+          <!-- End Of Home -->
+
+          <!-- Budget -->
           <div
             class="tab-pane fade"
             id="profile-tab-pane"
@@ -942,6 +1373,9 @@
           >
             ...
           </div>
+          <!-- End Of Budget -->
+
+          <!-- Team -->
           <div
             class="tab-pane fade"
             id="contact-tab-pane"
@@ -951,21 +1385,16 @@
           >
             ...
           </div>
-          <div
-            class="tab-pane fade"
-            id="disabled-tab-pane"
-            role="tabpanel"
-            aria-labelledby="disabled-tab"
-            tabindex="0"
-          >
-            ...
-          </div>
+          <!-- End Of Team -->
         </div>
         <!-- End Of Body -->
       </div>
     </section>
 
     <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/acquisitions.js"></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
