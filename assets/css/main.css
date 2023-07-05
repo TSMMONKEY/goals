@@ -18,8 +18,9 @@
 }
 .main-container .left-section {
   height: 100vh;
-  max-width: 280px;
+  position: fixed;
   overflow: hidden;
+  max-width: 280px;
   overflow-y: scroll;
   color: rgba(255, 255, 255, 0.8784313725);
   background: rgba(9, 19, 52, 0.9411764706);
@@ -101,7 +102,8 @@
 }
 
 .right-section {
-  width: 85%;
+  width: 100%;
+  margin-left: 280px;
 }
 .right-section nav .navbar-toggler-icon {
   width: 1.6em;
@@ -205,7 +207,6 @@
   background-color: #f2f5f9;
 }
 .right-section .summery {
-  gap: 10px;
   width: 100%;
   display: flex;
   margin: 0 auto;
@@ -215,76 +216,17 @@
   align-content: center;
   justify-content: space-around;
 }
-.right-section .summery .h5-card-title {
-  display: flex;
-  font-size: 15px;
-  align-items: center;
-  flex-flow: wrap row;
-  align-content: center;
-  justify-content: space-between;
+.right-section .summery .tradingview-widget-container {
+  width: 100% !important;
+  height: max-content !important;
 }
-.right-section .summery .h5-card-title span {
-  width: 31px;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 500px;
-  padding: 5px 0px 5px 0px;
-  transition: background 0.3s ease-in-out;
-}
-.right-section .summery .h5-card-title span svg {
-  width: 22px;
-  height: 20px;
-}
-.right-section .summery .h5-card-title span:hover {
-  background: rgba(0, 0, 0, 0.1490196078);
-  background-color: rgba(0, 0, 0, 0.1490196078);
-}
-.right-section .summery ul li {
-  margin: 0 0 18px 0;
-}
-.right-section .summery ul li h2 {
-  margin: 0;
-  padding: 0;
-  font-size: 55px;
-  font-weight: 500;
-}
-.right-section .summery ul li h4 {
-  font-size: 15px;
-  font-weight: 645;
-}
-.right-section .summery ul li h5 {
-  font-size: 16px;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.6);
-}
-.right-section .summery .first-ul h2 {
-  color: rgba(55, 114, 247, 0.8509803922);
-}
-.right-section .summery .first-ul h4 {
-  color: rgba(55, 114, 247, 0.8509803922);
-}
-.right-section .summery .second-ul h2 {
-  color: rgba(154, 233, 113, 0.9803921569);
-}
-.right-section .summery .second-ul h4 {
-  color: #87cd63;
-}
-.right-section .summery .third-ul h2 {
-  color: rgba(247, 218, 55, 0.8509803922);
-}
-.right-section .summery .third-ul h4 {
-  color: rgba(219, 193, 48, 0.85);
-}
-.right-section .summery .fourth-ul h2 {
-  color: rgba(247, 55, 55, 0.8509803922);
-}
-.right-section .summery .fourth-ul h4 {
-  color: rgba(213, 46, 46, 0.8509803922);
+.right-section .summery .tradingview-widget-container iframe {
+  width: 100% !important;
 }
 .right-section .graph-section {
   background: #fff;
   padding: 20px;
-  margin: 18px 0 0 0;
+  margin: 0 10px 0 0;
   border-radius: 10px;
   background-color: #fff;
 }
@@ -351,11 +293,208 @@
 .right-section .graph-section .right-graph-section .revaluateIssues {
   grid-area: evaluate-issues;
 }
+.right-section #trading-sector iframe {
+  height: 60vh !important;
+}
+.right-section .myGraphs {
+  width: 100% !important;
+}
+.right-section .myGraphs iframe {
+  width: 100% !important;
+  height: 26em !important;
+}
+.right-section .task-graph {
+  background: #fff;
+  padding: 20px;
+  margin: 0 10px 0 0;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.right-section .task-graph iframe {
+  width: 100% !important;
+  height: 32em !important;
+}
+.right-section .task-graph .task-section .task-nav {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+.right-section .task-graph .task-section .task-nav h3 {
+  font-size: 18px;
+}
+.right-section .task-graph .task-section .task-nav span button {
+  --bs-btn-padding-y: 0.17rem;
+}
+.right-section .task-graph .task-section .inner-task-graph {
+  width: 100%;
+  text-align: center;
+  background: #fff;
+  background-color: #fff;
+}
+.right-section .task-graph .task-section .inner-task-graph .myChartGraph {
+  width: 50%;
+  margin: 0 auto;
+}
+.right-section .task-graph .task-section .inner-task-graph .task-distribution {
+  display: flex;
+}
+.right-section .task-graph .task-section .inner-task-graph .task-distribution .new-tasks {
+  width: 50%;
+}
+.right-section .task-graph .task-section .inner-task-graph .task-distribution .completed-tasks {
+  width: 50%;
+}
+.right-section .Schedule {
+  padding: 20px;
+  background: #fff;
+  border-radius: 21px;
+  background-color: #fff;
+}
+.right-section .Schedule .tradingview-widget-container {
+  width: 100% !important;
+}
+.right-section .Schedule .tradingview-widget-container iframe {
+  width: 100% !important;
+}
+.right-section .Schedule .group-meeting {
+  width: 100%;
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  flex-flow: wrap row;
+  justify-content: space-between;
+}
+.right-section .Schedule ul li {
+  display: flex;
+  padding: 15px 0;
+  margin: 8px 0;
+  background: rgba(201, 201, 201, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(201, 201, 201, 0.3);
+  justify-content: space-around;
+  background-blend-mode: color;
+}
+.right-section .Schedule ul li .current-tasks {
+  height: 37px;
+  padding: 11px;
+  font-size: 0;
+  border-radius: 36px;
+  background: rgba(236, 184, 184, 0.4392156863);
+  background-color: rgba(236, 184, 184, 0.4392156863);
+}
+.right-section .Schedule ul li span {
+  font-size: 21px;
+}
+.right-section .Schedule ul li svg {
+  width: 16px;
+}
+.right-section .Schedule ul .meeting-min {
+  gap: 75px;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+.right-section .Schedule ul .meeting-min span {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 2px 0 0 0;
+}
+.right-section .Schedule ul .meeting-min span svg {
+  width: 19px;
+  margin: 0px 3px 3px 0;
+}
+.right-section .Schedule ul .schedule-headings {
+  gap: 94px;
+  display: flex;
+  font-size: 15px;
+  margin-left: -5px;
+  align-content: center;
+  align-items: center;
+}
+.right-section .Schedule ul .schedule-headings span {
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+.right-section .Schedule ul .schedule-headings .progress {
+  gap: 9px;
+  width: 37%;
+  display: flex;
+  padding: 15px;
+  background: #fff;
+  background-color: #fff;
+  align-content: center;
+  align-items: center;
+}
+.right-section .Schedule ul .schedule-headings .progress .dot {
+  background: #ff7d0b;
+  padding: 2px;
+  width: 9px;
+  border-radius: 536px;
+  height: 9px;
+}
+.right-section .Schedule ul .time-section {
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
 
-@media (min-width: 992px) {
+#second-Schedule {
+  width: 40.2%;
+  margin-right: 0;
+}
+#second-Schedule ul {
+  text-transform: capitalize;
+}
+
+@media only screen and (min-width: 992px) {
   .col-lg-2 {
     flex: 0 0 auto;
     width: 24%;
+  }
+}
+@media only screen and (min-width: 576px) {
+  .summery .col-sm-5 {
+    width: 49.667% !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #schedule-section {
+    flex-wrap: wrap !important;
+    flex-direction: column !important;
+  }
+}
+@media only screen and (min-width: 600px) {
+  #schedule-section {
+    flex-wrap: wrap;
+    flex-direction: row !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .graph-section-flex {
+    flex-wrap: wrap !important;
+    flex-direction: column !important;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .graph-section-flex {
+    flex-wrap: wrap;
+    flex-direction: row !important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  #second-Schedule {
+    width: 100% !important;
   }
 }
 

@@ -16,6 +16,14 @@
 
     <!-- Chart.js script -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-T1ZCslAvFM/6tZWTkE0c7MPY7+o4Y2sPbm9+hxQn0iQ8RZdfYal3q81mKwhSvqI3AqHNRvTljTP7AiegeXpXzw=="
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <section class="container-fluid main-container">
@@ -857,6 +865,48 @@
             </div>
           </div>
         </nav>
+        <!-- Ticker Tape Widget -->
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script
+            type="text/javascript"
+            src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+            async
+          >
+              {
+              "symbols": [
+                {
+                  "proName": "FOREXCOM:SPXUSD",
+                  "title": "S&P 500"
+                },
+                {
+                  "proName": "FOREXCOM:NSXUSD",
+                  "title": "US 100"
+                },
+                {
+                  "proName": "FX_IDC:EURUSD",
+                  "title": "EUR/USD"
+                },
+                {
+                  "proName": "BITSTAMP:BTCUSD",
+                  "title": "Bitcoin"
+                },
+                {
+                  "proName": "BITSTAMP:ETHUSD",
+                  "title": "Ethereum"
+                }
+              ],
+              "showSymbolLogo": true,
+              "colorTheme": "light",
+              "isTransparent": false,
+              "displayMode": "adaptive",
+              "locale": "en"
+            }
+          </script>
+        </div>
+        <!-- TradingView Widget END -->
+        <!-- End Of Ticker Tape Widget -->
         <!-- End Of NavBar -->
 
         <!-- Hero Section -->
@@ -1081,399 +1131,779 @@
             tabindex="0"
           >
             <div class="container-fluid">
-              <section class="summery">
-                <div class="col-sm-6 col-lg-2 mb-3 mb-sm-0 first-card">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title h5-card-title">
-                        Summary
-                        <span>
-                          <svg
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            stroke="#4a4a4a"
-                            stroke-width="1"
-                            stroke-linecap="round"
-                            stroke-linejoin="miter"
-                          >
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g
-                              id="SVGRepo_tracerCarrier"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            ></g>
-                            <g id="SVGRepo_iconCarrier">
-                              <line
-                                x1="11.99"
-                                y1="6"
-                                x2="12"
-                                y2="6"
-                                stroke-linecap="round"
-                                stroke-width="2"
-                              ></line>
-                              <line
-                                x1="11.99"
-                                y1="12"
-                                x2="12"
-                                y2="12"
-                                stroke-linecap="round"
-                                stroke-width="2"
-                              ></line>
-                              <line
-                                x1="11.99"
-                                y1="18"
-                                x2="12"
-                                y2="18"
-                                stroke-linecap="round"
-                                stroke-width="2"
-                              ></line>
-                            </g>
-                          </svg>
-                        </span>
-                      </h5>
-                      <ul class="first-ul">
-                        <li>
-                          <h2>21</h2>
-                          <h4>Due Tasks</h4>
-                        </li>
-                        <li>
-                          <h5>Complete: 13</h5>
-                        </li>
-                      </ul>
+              <section class="summery d-flex">
+                <div
+                  class="col-lg-2 col-sm-12 mt-sm-5 mt-lg-3 mb-m-0 first-card"
+                >
+                  <!-- TradingView Widget BEGIN -->
+                  <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright">
+                      <a
+                        href="https://www.tradingview.com/"
+                        rel="noopener nofollow"
+                        target="_blank"
+                        ><span class="blue-text"
+                          >Track all markets on TradingView</span
+                        ></a
+                      >
                     </div>
+                    <script
+                      type="text/javascript"
+                      src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                      async
+                    >
+                        {
+                        "symbol": "OANDA:XAUUSD",
+                        "width": "100%",
+                        "height": "100%",
+                        "locale": "en",
+                        "dateRange": "12M",
+                        "colorTheme": "light",
+                        "isTransparent": false,
+                        "autosize": true,
+                        "largeChartUrl": ""
+                      }
+                    </script>
                   </div>
+                  <!-- TradingView Widget END -->
                 </div>
-                <div class="col-sm-6 col-lg-2 second-card">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title h5-card-title">
-                        Overdue
-                        <span>
-                          <svg
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            stroke="#4a4a4a"
-                            stroke-width="1"
-                            stroke-linecap="round"
-                            stroke-linejoin="miter"
-                          >
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g
-                              id="SVGRepo_tracerCarrier"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            ></g>
-                            <g id="SVGRepo_iconCarrier">
-                              <line
-                                x1="11.99"
-                                y1="6"
-                                x2="12"
-                                y2="6"
-                                stroke-linecap="round"
-                                stroke-width="2"
-                              ></line>
-                              <line
-                                x1="11.99"
-                                y1="12"
-                                x2="12"
-                                y2="12"
-                                stroke-linecap="round"
-                                stroke-width="2"
-                              ></line>
-                              <line
-                                x1="11.99"
-                                y1="18"
-                                x2="12"
-                                y2="18"
-                                stroke-linecap="round"
-                                stroke-width="2"
-                              ></line>
-                            </g>
-                          </svg>
-                        </span>
-                      </h5>
-                      <ul class="second-ul">
-                        <li>
-                          <h2>25</h2>
-                          <h4>Due Tasks</h4>
-                        </li>
-                        <li>
-                          <h5>Complete: 3</h5>
-                        </li>
-                      </ul>
+
+                <div class="col-lg-2 col-sm-12 mt-lg-3 mb-m-0 first-card">
+                  <!-- TradingView Widget BEGIN -->
+                  <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright">
+                      <a
+                        href="https://www.tradingview.com/"
+                        rel="noopener nofollow"
+                        target="_blank"
+                        ><span class="blue-text"
+                          >Track all markets on TradingView</span
+                        ></a
+                      >
                     </div>
+                    <script
+                      type="text/javascript"
+                      src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                      async
+                    >
+                        {
+                        "symbol": "BINANCE:BTCUSDT",
+                        "width": "100%",
+                        "height": "100%",
+                        "locale": "en",
+                        "dateRange": "12M",
+                        "colorTheme": "light",
+                        "isTransparent": false,
+                        "autosize": true,
+                        "largeChartUrl": ""
+                      }
+                    </script>
                   </div>
+                  <!-- TradingView Widget END -->
                 </div>
-                <div class="col-sm-6 col-lg-2 third-card">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title h5-card-title">
-                        Issues
-                        <span>
-                          <svg
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            stroke="#4a4a4a"
-                            stroke-width="1"
-                            stroke-linecap="round"
-                            stroke-linejoin="miter"
-                          >
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g
-                              id="SVGRepo_tracerCarrier"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            ></g>
-                            <g id="SVGRepo_iconCarrier">
-                              <line
-                                x1="11.99"
-                                y1="6"
-                                x2="12"
-                                y2="6"
-                                stroke-linecap="round"
-                                stroke-width="2"
-                              ></line>
-                              <line
-                                x1="11.99"
-                                y1="12"
-                                x2="12"
-                                y2="12"
-                                stroke-linecap="round"
-                                stroke-width="2"
-                              ></line>
-                              <line
-                                x1="11.99"
-                                y1="18"
-                                x2="12"
-                                y2="18"
-                                stroke-linecap="round"
-                                stroke-width="2"
-                              ></line>
-                            </g>
-                          </svg>
-                        </span>
-                      </h5>
-                      <ul class="third-ul">
-                        <li>
-                          <h2>60</h2>
-                          <h4>Due Tasks</h4>
-                        </li>
-                        <li>
-                          <h5>Complete: 28</h5>
-                        </li>
-                      </ul>
+
+                <div class="col-lg-2 col-sm-12 mt-lg-3 mb-m-0 first-card">
+                  <!-- TradingView Widget BEGIN -->
+                  <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright">
+                      <a
+                        href="https://www.tradingview.com/"
+                        rel="noopener nofollow"
+                        target="_blank"
+                        ><span class="blue-text"
+                          >Track all markets on TradingView</span
+                        ></a
+                      >
                     </div>
+                    <script
+                      type="text/javascript"
+                      src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                      async
+                    >
+                        {
+                        "symbol": "FX:NZDUSD",
+                        "width": "100%",
+                        "height": "100%",
+                        "locale": "en",
+                        "dateRange": "12M",
+                        "colorTheme": "light",
+                        "isTransparent": false,
+                        "autosize": true,
+                        "largeChartUrl": ""
+                      }
+                    </script>
                   </div>
+                  <!-- TradingView Widget END -->
                 </div>
-                <div class="col-sm-6 col-lg-2 fourth-card">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title h5-card-title">
-                        Features
-                        <span>
-                          <svg
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            stroke="#4a4a4a"
-                            stroke-width="1"
-                            stroke-linecap="round"
-                            stroke-linejoin="miter"
-                          >
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g
-                              id="SVGRepo_tracerCarrier"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            ></g>
-                            <g id="SVGRepo_iconCarrier">
-                              <line
-                                x1="11.99"
-                                y1="6"
-                                x2="12"
-                                y2="6"
-                                stroke-linecap="round"
-                                stroke-width="2"
-                              ></line>
-                              <line
-                                x1="11.99"
-                                y1="12"
-                                x2="12"
-                                y2="12"
-                                stroke-linecap="round"
-                                stroke-width="2"
-                              ></line>
-                              <line
-                                x1="11.99"
-                                y1="18"
-                                x2="12"
-                                y2="18"
-                                stroke-linecap="round"
-                                stroke-width="2"
-                              ></line>
-                            </g>
-                          </svg>
-                        </span>
-                      </h5>
-                      <ul class="fourth-ul">
-                        <li>
-                          <h2>12</h2>
-                          <h4>Due Tasks</h4>
-                        </li>
-                        <li>
-                          <h5>Complete: 19</h5>
-                        </li>
-                      </ul>
+
+                <div class="col-lg-2 col-sm-12 mt-lg-3 mb-m-0 first-card">
+                  <!-- TradingView Widget BEGIN -->
+                  <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright">
+                      <a
+                        href="https://www.tradingview.com/"
+                        rel="noopener nofollow"
+                        target="_blank"
+                        ><span class="blue-text"
+                          >Track all markets on TradingView</span
+                        ></a
+                      >
                     </div>
+                    <script
+                      type="text/javascript"
+                      src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+                      async
+                    >
+                        {
+                        "symbol": "NASDAQ:AAPL",
+                        "width": "100%",
+                        "height": "100%",
+                        "locale": "en",
+                        "dateRange": "12M",
+                        "colorTheme": "light",
+                        "isTransparent": false,
+                        "autosize": true,
+                        "largeChartUrl": ""
+                      }
+                    </script>
                   </div>
+                  <!-- TradingView Widget END -->
                 </div>
               </section>
+
               <!-- Graph Section -->
-              <section class="graph-section">
-                <div class="graph-section-nav">
-                  <h3>Github Issues Summary</h3>
-                  <section class="buttons">
-                    <button type="button" class="btn btn-outline-primary">
-                      Last Week
-                    </button>
-                    <button type="button" class="btn btn-outline-secondary">
-                      This Week
-                    </button>
-                  </section>
+              <section class="graph-section-flex mt-3 pb-5 d-flex">
+                <div class="graph-section col-lg-7 col-12 col-sm-12 mt-5">
+                  <!-- TradingView Widget BEGIN -->
+                  <div class="tradingview-widget-container" id="trading-sector">
+                    <div id="tradingview_aaaaa"></div>
+                    <div class="tradingview-widget-copyright">
+                      <a
+                        href="https://www.tradingview.com/"
+                        rel="noopener nofollow"
+                        target="_blank"
+                        ><span class="blue-text"
+                          >Track all markets on TradingView</span
+                        ></a
+                      >
+                    </div>
+                    <script
+                      type="text/javascript"
+                      src="https://s3.tradingview.com/tv.js"
+                    ></script>
+                    <script type="text/javascript">
+                      new TradingView.widget({
+                        autosize: true,
+                        symbol: "OANDA:XAUUSD",
+                        interval: "D",
+                        timezone: "Etc/UTC",
+                        theme: "light",
+                        style: "1",
+                        locale: "en",
+                        toolbar_bg: "#f1f3f6",
+                        enable_publishing: false,
+                        withdateranges: true,
+                        hide_side_toolbar: false,
+                        allow_symbol_change: true,
+                        container_id: "tradingview_aaaaa",
+                      });
+                    </script>
+                  </div>
+                  <!-- TradingView Widget END -->
                 </div>
 
-                <section class="myGraphs">
-                  <div class="left-graph-section">
-                    <h3>New vs Closed</h3>
-                    <div style="width: 800px" class="graph-summery-wrapper">
-                      <canvas id="myChartCanvas"></canvas>
+                <!-- last Graph Section -->
+                <div
+                  class="task-graph col-lg-4 col-12 col-sm-12 mt-sm-3 mt-lg-5"
+                >
+                  <!-- TradingView Widget BEGIN -->
+                  <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright">
+                      <a
+                        href="https://www.tradingview.com/"
+                        rel="noopener nofollow"
+                        target="_blank"
+                        ><span class="blue-text"
+                          >Track all markets on TradingView</span
+                        ></a
+                      >
                     </div>
+                    <script
+                      type="text/javascript"
+                      src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js"
+                      async
+                    >
+                        {
+                        "symbols": [
+                          [
+                            "Apple",
+                            "AAPL|1D"
+                          ],
+                          [
+                            "Google",
+                            "GOOGL|1D"
+                          ],
+                          [
+                            "Microsoft",
+                            "MSFT|1D"
+                          ],
+                          [
+                            "OANDA:XAUUSD|1D"
+                          ],
+                          [
+                            "OANDA:NZDUSD|1D"
+                          ],
+                          [
+                            "BITSTAMP:BTCUSD|1D"
+                          ]
+                        ],
+                        "chartOnly": false,
+                        "width": "100%",
+                        "height": "100%",
+                        "locale": "en",
+                        "colorTheme": "light",
+                        "autosize": true,
+                        "showVolume": false,
+                        "showMA": false,
+                        "hideDateRanges": false,
+                        "hideMarketStatus": false,
+                        "hideSymbolLogo": false,
+                        "scalePosition": "right",
+                        "scaleMode": "Normal",
+                        "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+                        "fontSize": "10",
+                        "noTimeScale": false,
+                        "valuesTracking": "1",
+                        "changeMode": "price-and-percent",
+                        "chartType": "area",
+                        "maLineColor": "#2962FF",
+                        "maLineWidth": 1,
+                        "maLength": 9,
+                        "lineWidth": 2,
+                        "lineType": 0,
+                        "dateRanges": [
+                          "1d|1",
+                          "1m|30",
+                          "3m|60",
+                          "12m|1D",
+                          "60m|1W",
+                          "all|1M"
+                        ]
+                      }
+                    </script>
                   </div>
-
-                  <div class="right-graph-section">
-                    <div class="newIssues">
-                      <h2>214</h2>
-                      <h3>New Issues</h3>
-                    </div>
-                    <div class="closedIssues">
-                      <h2>24</h2>
-                      <h3>Closed Issues</h3>
-                    </div>
-                    <div class="fixedIssues">
-                      <h2>5</h2>
-                      <h3>Fixed Issues</h3>
-                    </div>
-                    <div class="wonIssues">
-                      <h2>14</h2>
-                      <h3>Won't Fix</h3>
-                    </div>
-                    <div class="re-openedIssues">
-                      <h2>5</h2>
-                      <h3>Re-opened</h3>
-                    </div>
-                    <div class="evaluateIssues">
-                      <h2>20</h2>
-                      <h3>Inspection/s</h3>
-                    </div>
-                  </div>
-                </section>
+                  <!-- TradingView Widget END -->
+                </div>
               </section>
-              <!-- last Graph Section -->
-              <section class="task-graph">
-                <div class="left-task-section">
-                  <section class="task-nav">
-                    <h3>Task Destination</h3>
+
+              <!-- Schedule -->
+              <section class="schedule pb-5 d-flex" id="schedule-section">
+                <div
+                  class="Schedule col-lg-7 col-12 col-sm-12"
+                  style="margin-right: 10px"
+                >
+                  <!-- TradingView Widget BEGIN -->
+                  <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright">
+                      <a
+                        href="https://www.tradingview.com/"
+                        rel="noopener nofollow"
+                        target="_blank"
+                        ><span class="blue-text"
+                          >Track all markets on TradingView</span
+                        ></a
+                      >
+                    </div>
+                    <script
+                      type="text/javascript"
+                      src="https://s3.tradingview.com/external-embedding/embed-widget-events.js"
+                      async
+                    >
+                        {
+                        "width": "100%",
+                        "height": "15vh",
+                        "colorTheme": "light",
+                        "isTransparent": false,
+                        "locale": "en",
+                        "importanceFilter": "-1,0,1",
+                        "currencyFilter": "AUD,USD,CAD,EUR,FRF,DEM,ITL,JPY,MXN,NZD,ESP,CHF,TRL,GBP"
+                      }
+                    </script>
+                  </div>
+                  <!-- TradingView Widget END -->
+                </div>
+
+                <div
+                  class="Schedule col-lg-4 col-12 col-sm-12 mt-sm-3 mt-lg-0"
+                  id="second-Schedule"
+                >
+                  <h3 class="group-meeting">
+                    Schedule
                     <span>
                       <button type="button" class="btn btn-outline-primary">
-                        Last Week
+                        Today
                       </button>
                       <button type="button" class="btn btn-outline-secondary">
-                        This Week
+                        Today
                       </button>
                     </span>
-                  </section>
+                  </h3>
+                  <ul class="mt-3">
+                    <li>
+                      <span class="current-tasks">
+                        <svg
+                          version="1.1"
+                          id="_x32_"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          viewBox="0 0 512 512"
+                          xml:space="preserve"
+                          fill="#c0c0c0"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <style type="text/css">
+                              .st0 {
+                                fill: #373737;
+                              }
+                            </style>
+                            <g>
+                              <path
+                                class="st0"
+                                d="M181.891,76.906c0.016-8.656,3.469-16.344,9.125-22.031c5.688-5.672,13.375-9.125,22.031-9.125h90.391 c4.359,0,7.922,0.844,11,2.25c4.594,2.125,8.313,5.578,11.141,10.469c2.797,4.875,4.531,11.219,4.531,18.438v24.828h32V76.906 c0-16.391-5.234-31.984-15.484-43.828c-5.125-5.906-11.516-10.813-18.875-14.172c-7.359-3.375-15.641-5.172-24.313-5.156h-90.391 c-34.891,0-63.141,28.281-63.156,63.156v24.828h32V76.906z"
+                              ></path>
+                              <path
+                                class="st0"
+                                d="M275.781,314.891c-1.75-1.344-4-2.375-6.734-3.078c-2.734-0.719-6.047-1.078-9.938-1.078h-18.219v32.391 h18.297c4.125,0,7.563-0.469,10.313-1.375c2.781-0.922,4.984-2.141,6.656-3.672c1.656-1.516,2.875-3.297,3.625-5.344 c0.719-2.031,1.094-4.203,1.094-6.5c0-2.375-0.406-4.531-1.219-6.453C278.828,317.875,277.547,316.25,275.781,314.891z"
+                              ></path>
+                              <path
+                                class="st0"
+                                d="M270.25,278.828c3.906-2.547,5.844-6.609,5.844-12.156c0-5.75-1.75-9.844-5.266-12.281 c-3.516-2.453-8.984-3.688-16.438-3.688h-14.125v31.938h12.906C260.672,282.641,266.359,281.375,270.25,278.828z"
+                              ></path>
+                              <path
+                                class="st0"
+                                d="M443.969,124.922H68.031C30.469,124.922,0,155.375,0,192.953v199.938c0,37.563,30.453,68.016,68,68.031v17.328 c0,11.047,8.953,20,20,20s20-8.953,20-20v-17.328h296v17.328c0,11.047,8.953,20,20,20s20-8.953,20-20v-17.328 c37.563-0.016,68-30.469,68-68.031V192.953C512,155.375,481.547,124.922,443.969,124.922z M318.125,343.5 c-2.5,5.156-6.141,9.625-10.906,13.359c-4.766,3.719-8.844,6.656-15.813,8.797c-5.5,1.656-12.406,2.672-18.875,3.016v19.484 h-17.422v-19.344h-15.797v19.344h-17.406v-19.344h-13.844h-17.906v-17.672c0-3.422-0.234-5.5,3.328-6.203 c0.313-0.063,0.766-0.141,1.328-0.234c0.594-0.109,7.547-0.531,9.125-0.531c2.813,0,4.125-2.656,4.125-5.313v-85.938 c0-3.219-1.75-4.5-4.125-4.828c-1.563-0.219-8.531-0.438-9.125-0.531c-0.563-0.109-1.016-0.172-1.328-0.234 c-3.563-0.719-3.328-2.781-3.328-6.203v-15.844h17.906h13.844v-19.797h17.406v19.859l15.797,0.031v-19.891h17.422v20.172 c9.406,0.797,21.031,3.75,29.016,9.953c4.484,3.469,7.953,7.313,10.109,12c2.125,4.703,3.188,10,3.188,15.891 c0,3.375-0.531,6.594-1.594,9.672s-2.719,5.953-4.969,8.641c-2.25,2.672-9.75,10.25-16.438,12.859 c20.438,3.563,29.984,15.078,30,31.953C321.844,332.719,320.609,338.359,318.125,343.5z"
+                              ></path>
+                            </g>
+                          </g>
+                        </svg>
+                      </span>
+                      <section class="schedule-headings">
+                        <span>Learn More On Technical analysis</span>
+                        <span class="progress"
+                          ><div
+                            class="dot"
+                            style="background-color: red; background: red"
+                          ></div>
+                          In progress</span
+                        >
+                      </section>
+                      <span class="time-section">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M12 8V12L14 14M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 10.1599 20.4478 8.44877 19.5 7.02331"
+                              stroke="#000000"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </g>
+                        </svg>
+                        48h
+                      </span>
+                    </li>
 
-                  <section class="body">
-                    <!-- Task Graph -->
-                    <div class="task-graph">
-                      <canvas id="myChart"></canvas>
-                      <div class="new-tasks">
-                        <h3>594</h3>
-                        <h4>New Tasks</h4>
-                      </div>
-                      <div class="completed-tasks">
-                        <h3>259</h3>
-                        <h4>Completed Tasks</h4>
-                      </div>
-                    </div>
+                    <li>
+                      <span class="current-tasks" style="background-color: #d7ecb870; background: #d7ecb870;">
+                        <svg
+                          viewBox="0 0 1024 1024"
+                          fill="#000000"
+                          class="icon"
+                          version="1.1"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M513.147 584.708c-15.947 0-39.468-1.747-61.040-10.031l-172.596-66.501h-84.542v103.565c0 31.84 23.684 67.975 52.884 80.663l208.987 90.967c29.2 12.688 76.605 12.743 105.841 0.127l211.263-91.222c29.218-12.615 52.921-48.697 52.921-80.537v-103.565h-93.298l-152.954 64.48c-18.386 7.773-42.38 12.051-67.466 12.051zM46.313 372.991l416.19 160.363c29.728 11.433 77.605 10.686 106.951-1.693l397.458-167.536v247.18l-24.558 81.938h71.015l-25.413-82.794v-256.319h-0.71c17.167-11.833 13.162-26.596-12.252-35.681l-404.357-143.888c-30.001-10.704-78.479-10.25-108.299 0.946l-415.844 156.449c-29.819 11.214-29.891 29.6-0.182 41.033z"
+                            ></path>
+                          </g>
+                        </svg>
+                      </span>
+                      <section class="schedule-headings">
+                        <span>Strategy Review For Day-Trading</span>
+                        <span class="progress"
+                          ><div class="dot"></div>
+                          next in line</span
+                        >
+                      </section>
+                      <span class="time-section">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M12 8V12L14 14M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 10.1599 20.4478 8.44877 19.5 7.02331"
+                              stroke="#000000"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </g>
+                        </svg>
+                        32h
+                      </span>
+                      <!-- </div> -->
+                    </li>
 
-                    <!-- Schedule -->
-                    <div class="Schedule">
-                      <h3>
-                        Schedule
-                        <span>
-                          <button type="button" class="btn btn-outline-primary">
-                            Today
-                          </button>
-                          <button
-                            type="button"
-                            class="btn btn-outline-secondary"
-                          >
-                            Today
-                          </button>
-                        </span>
-                      </h3>
-                      <ul>
-                        <li>
-                          <h3>Group Meeting</h3>
-                          <div class="meeting-min">
-                            <span>in 32 minutes</span> <span>Conference room 48</span> <span><svg fill="#383838" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#383838"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.512"></g><g id="SVGRepo_iconCarrier"><path d="M 6 6 L 6 8.15625 L 22.53125 16 L 6 23.84375 L 6 26 L 26 16.78125 L 26 15.21875 Z"></path></g></svg></span>
-                          </div>
-                        </li>
-                        <li>
-                          <h3>Group Meeting</h3>
-                          <div class="meeting-min">
-                            <span>in 32 minutes</span> <span>Conference room 48</span> <span><svg fill="#383838" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#383838"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.512"></g><g id="SVGRepo_iconCarrier"><path d="M 6 6 L 6 8.15625 L 22.53125 16 L 6 23.84375 L 6 26 L 26 16.78125 L 26 15.21875 Z"></path></g></svg></span>
-                          </div>
-                        </li>
-                        <li>
-                          <h3>Group Meeting</h3>
-                          <div class="meeting-min">
-                            <span>in 32 minutes</span> <span>Conference room 48</span> <span><svg fill="#383838" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#383838"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.512"></g><g id="SVGRepo_iconCarrier"><path d="M 6 6 L 6 8.15625 L 22.53125 16 L 6 23.84375 L 6 26 L 26 16.78125 L 26 15.21875 Z"></path></g></svg></span>
-                          </div>
-                        </li>
-                        <li>
-                          <h3>Group Meeting</h3>
-                          <div class="meeting-min">
-                            <span>in 32 minutes</span> <span>Conference room 48</span> <span><svg fill="#383838" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#383838"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.512"></g><g id="SVGRepo_iconCarrier"><path d="M 6 6 L 6 8.15625 L 22.53125 16 L 6 23.84375 L 6 26 L 26 16.78125 L 26 15.21875 Z"></path></g></svg></span>
-                          </div>
-                        </li>
-                        <li>
-                          <h3>Group Meeting</h3>
-                          <div class="meeting-min">
-                            <span>in 32 minutes</span> <span>Conference room 48</span> <span><svg fill="#383838" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#383838"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.512"></g><g id="SVGRepo_iconCarrier"><path d="M 6 6 L 6 8.15625 L 22.53125 16 L 6 23.84375 L 6 26 L 26 16.78125 L 26 15.21875 Z"></path></g></svg></span>
-                          </div>
-                        </li>
-                        <li>
-                          <h3>Group Meeting</h3>
-                          <div class="meeting-min">
-                            <span>in 32 minutes</span> <span>Conference room 48</span> <span><svg fill="#383838" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#383838"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.512"></g><g id="SVGRepo_iconCarrier"><path d="M 6 6 L 6 8.15625 L 22.53125 16 L 6 23.84375 L 6 26 L 26 16.78125 L 26 15.21875 Z"></path></g></svg></span>
-                          </div>
-                        </li>
-                        <li>
-                          <h3>Group Meeting</h3>
-                          <div class="meeting-min">
-                            <span>in 32 minutes</span> <span>Conference room 48</span> <span><svg fill="#383838" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#383838"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.512"></g><g id="SVGRepo_iconCarrier"><path d="M 6 6 L 6 8.15625 L 22.53125 16 L 6 23.84375 L 6 26 L 26 16.78125 L 26 15.21875 Z"></path></g></svg></span>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </section>
+                    <li>
+                      <span class="current-tasks">
+                        <svg
+                          version="1.1"
+                          id="_x32_"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          viewBox="0 0 512 512"
+                          xml:space="preserve"
+                          fill="#c0c0c0"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <style type="text/css">
+                              .st0 {
+                                fill: #373737;
+                              }
+                            </style>
+                            <g>
+                              <path
+                                class="st0"
+                                d="M181.891,76.906c0.016-8.656,3.469-16.344,9.125-22.031c5.688-5.672,13.375-9.125,22.031-9.125h90.391 c4.359,0,7.922,0.844,11,2.25c4.594,2.125,8.313,5.578,11.141,10.469c2.797,4.875,4.531,11.219,4.531,18.438v24.828h32V76.906 c0-16.391-5.234-31.984-15.484-43.828c-5.125-5.906-11.516-10.813-18.875-14.172c-7.359-3.375-15.641-5.172-24.313-5.156h-90.391 c-34.891,0-63.141,28.281-63.156,63.156v24.828h32V76.906z"
+                              ></path>
+                              <path
+                                class="st0"
+                                d="M275.781,314.891c-1.75-1.344-4-2.375-6.734-3.078c-2.734-0.719-6.047-1.078-9.938-1.078h-18.219v32.391 h18.297c4.125,0,7.563-0.469,10.313-1.375c2.781-0.922,4.984-2.141,6.656-3.672c1.656-1.516,2.875-3.297,3.625-5.344 c0.719-2.031,1.094-4.203,1.094-6.5c0-2.375-0.406-4.531-1.219-6.453C278.828,317.875,277.547,316.25,275.781,314.891z"
+                              ></path>
+                              <path
+                                class="st0"
+                                d="M270.25,278.828c3.906-2.547,5.844-6.609,5.844-12.156c0-5.75-1.75-9.844-5.266-12.281 c-3.516-2.453-8.984-3.688-16.438-3.688h-14.125v31.938h12.906C260.672,282.641,266.359,281.375,270.25,278.828z"
+                              ></path>
+                              <path
+                                class="st0"
+                                d="M443.969,124.922H68.031C30.469,124.922,0,155.375,0,192.953v199.938c0,37.563,30.453,68.016,68,68.031v17.328 c0,11.047,8.953,20,20,20s20-8.953,20-20v-17.328h296v17.328c0,11.047,8.953,20,20,20s20-8.953,20-20v-17.328 c37.563-0.016,68-30.469,68-68.031V192.953C512,155.375,481.547,124.922,443.969,124.922z M318.125,343.5 c-2.5,5.156-6.141,9.625-10.906,13.359c-4.766,3.719-8.844,6.656-15.813,8.797c-5.5,1.656-12.406,2.672-18.875,3.016v19.484 h-17.422v-19.344h-15.797v19.344h-17.406v-19.344h-13.844h-17.906v-17.672c0-3.422-0.234-5.5,3.328-6.203 c0.313-0.063,0.766-0.141,1.328-0.234c0.594-0.109,7.547-0.531,9.125-0.531c2.813,0,4.125-2.656,4.125-5.313v-85.938 c0-3.219-1.75-4.5-4.125-4.828c-1.563-0.219-8.531-0.438-9.125-0.531c-0.563-0.109-1.016-0.172-1.328-0.234 c-3.563-0.719-3.328-2.781-3.328-6.203v-15.844h17.906h13.844v-19.797h17.406v19.859l15.797,0.031v-19.891h17.422v20.172 c9.406,0.797,21.031,3.75,29.016,9.953c4.484,3.469,7.953,7.313,10.109,12c2.125,4.703,3.188,10,3.188,15.891 c0,3.375-0.531,6.594-1.594,9.672s-2.719,5.953-4.969,8.641c-2.25,2.672-9.75,10.25-16.438,12.859 c20.438,3.563,29.984,15.078,30,31.953C321.844,332.719,320.609,338.359,318.125,343.5z"
+                              ></path>
+                            </g>
+                          </g>
+                        </svg>
+                      </span>
+                      <section class="schedule-headings">
+                        <span>Develop a Trading Plan strategy </span>
+                        <span class="progress"
+                          ><div class="dot"></div>
+                          In progress</span
+                        >
+                      </section>
+                      <span class="time-section">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M12 8V12L14 14M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 10.1599 20.4478 8.44877 19.5 7.02331"
+                              stroke="#000000"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </g>
+                        </svg>
+                        48h
+                      </span>
+                      <!-- </div> -->
+                    </li>
+
+                    <li>
+                      <span class="current-tasks">
+                        <svg
+                          version="1.1"
+                          id="_x32_"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          viewBox="0 0 512 512"
+                          xml:space="preserve"
+                          fill="#c0c0c0"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <style type="text/css">
+                              .st0 {
+                                fill: #373737;
+                              }
+                            </style>
+                            <g>
+                              <path
+                                class="st0"
+                                d="M181.891,76.906c0.016-8.656,3.469-16.344,9.125-22.031c5.688-5.672,13.375-9.125,22.031-9.125h90.391 c4.359,0,7.922,0.844,11,2.25c4.594,2.125,8.313,5.578,11.141,10.469c2.797,4.875,4.531,11.219,4.531,18.438v24.828h32V76.906 c0-16.391-5.234-31.984-15.484-43.828c-5.125-5.906-11.516-10.813-18.875-14.172c-7.359-3.375-15.641-5.172-24.313-5.156h-90.391 c-34.891,0-63.141,28.281-63.156,63.156v24.828h32V76.906z"
+                              ></path>
+                              <path
+                                class="st0"
+                                d="M275.781,314.891c-1.75-1.344-4-2.375-6.734-3.078c-2.734-0.719-6.047-1.078-9.938-1.078h-18.219v32.391 h18.297c4.125,0,7.563-0.469,10.313-1.375c2.781-0.922,4.984-2.141,6.656-3.672c1.656-1.516,2.875-3.297,3.625-5.344 c0.719-2.031,1.094-4.203,1.094-6.5c0-2.375-0.406-4.531-1.219-6.453C278.828,317.875,277.547,316.25,275.781,314.891z"
+                              ></path>
+                              <path
+                                class="st0"
+                                d="M270.25,278.828c3.906-2.547,5.844-6.609,5.844-12.156c0-5.75-1.75-9.844-5.266-12.281 c-3.516-2.453-8.984-3.688-16.438-3.688h-14.125v31.938h12.906C260.672,282.641,266.359,281.375,270.25,278.828z"
+                              ></path>
+                              <path
+                                class="st0"
+                                d="M443.969,124.922H68.031C30.469,124.922,0,155.375,0,192.953v199.938c0,37.563,30.453,68.016,68,68.031v17.328 c0,11.047,8.953,20,20,20s20-8.953,20-20v-17.328h296v17.328c0,11.047,8.953,20,20,20s20-8.953,20-20v-17.328 c37.563-0.016,68-30.469,68-68.031V192.953C512,155.375,481.547,124.922,443.969,124.922z M318.125,343.5 c-2.5,5.156-6.141,9.625-10.906,13.359c-4.766,3.719-8.844,6.656-15.813,8.797c-5.5,1.656-12.406,2.672-18.875,3.016v19.484 h-17.422v-19.344h-15.797v19.344h-17.406v-19.344h-13.844h-17.906v-17.672c0-3.422-0.234-5.5,3.328-6.203 c0.313-0.063,0.766-0.141,1.328-0.234c0.594-0.109,7.547-0.531,9.125-0.531c2.813,0,4.125-2.656,4.125-5.313v-85.938 c0-3.219-1.75-4.5-4.125-4.828c-1.563-0.219-8.531-0.438-9.125-0.531c-0.563-0.109-1.016-0.172-1.328-0.234 c-3.563-0.719-3.328-2.781-3.328-6.203v-15.844h17.906h13.844v-19.797h17.406v19.859l15.797,0.031v-19.891h17.422v20.172 c9.406,0.797,21.031,3.75,29.016,9.953c4.484,3.469,7.953,7.313,10.109,12c2.125,4.703,3.188,10,3.188,15.891 c0,3.375-0.531,6.594-1.594,9.672s-2.719,5.953-4.969,8.641c-2.25,2.672-9.75,10.25-16.438,12.859 c20.438,3.563,29.984,15.078,30,31.953C321.844,332.719,320.609,338.359,318.125,343.5z"
+                              ></path>
+                            </g>
+                          </g>
+                        </svg>
+                      </span>
+                      <section class="schedule-headings">
+                        <span>Simulate Trading with Paper Trading</span>
+                        <span class="progress"
+                          ><div class="dot"></div>
+                          In progress</span
+                        >
+                      </section>
+                      <span class="time-section">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M12 8V12L14 14M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 10.1599 20.4478 8.44877 19.5 7.02331"
+                              stroke="#000000"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </g>
+                        </svg>
+                        48h
+                      </span>
+                      <!-- </div> -->
+                    </li>
+
+                    <li>
+                      <span class="current-tasks">
+                        <svg
+                          version="1.1"
+                          id="_x32_"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          viewBox="0 0 512 512"
+                          xml:space="preserve"
+                          fill="#c0c0c0"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <style type="text/css">
+                              .st0 {
+                                fill: #373737;
+                              }
+                            </style>
+                            <g>
+                              <path
+                                class="st0"
+                                d="M181.891,76.906c0.016-8.656,3.469-16.344,9.125-22.031c5.688-5.672,13.375-9.125,22.031-9.125h90.391 c4.359,0,7.922,0.844,11,2.25c4.594,2.125,8.313,5.578,11.141,10.469c2.797,4.875,4.531,11.219,4.531,18.438v24.828h32V76.906 c0-16.391-5.234-31.984-15.484-43.828c-5.125-5.906-11.516-10.813-18.875-14.172c-7.359-3.375-15.641-5.172-24.313-5.156h-90.391 c-34.891,0-63.141,28.281-63.156,63.156v24.828h32V76.906z"
+                              ></path>
+                              <path
+                                class="st0"
+                                d="M275.781,314.891c-1.75-1.344-4-2.375-6.734-3.078c-2.734-0.719-6.047-1.078-9.938-1.078h-18.219v32.391 h18.297c4.125,0,7.563-0.469,10.313-1.375c2.781-0.922,4.984-2.141,6.656-3.672c1.656-1.516,2.875-3.297,3.625-5.344 c0.719-2.031,1.094-4.203,1.094-6.5c0-2.375-0.406-4.531-1.219-6.453C278.828,317.875,277.547,316.25,275.781,314.891z"
+                              ></path>
+                              <path
+                                class="st0"
+                                d="M270.25,278.828c3.906-2.547,5.844-6.609,5.844-12.156c0-5.75-1.75-9.844-5.266-12.281 c-3.516-2.453-8.984-3.688-16.438-3.688h-14.125v31.938h12.906C260.672,282.641,266.359,281.375,270.25,278.828z"
+                              ></path>
+                              <path
+                                class="st0"
+                                d="M443.969,124.922H68.031C30.469,124.922,0,155.375,0,192.953v199.938c0,37.563,30.453,68.016,68,68.031v17.328 c0,11.047,8.953,20,20,20s20-8.953,20-20v-17.328h296v17.328c0,11.047,8.953,20,20,20s20-8.953,20-20v-17.328 c37.563-0.016,68-30.469,68-68.031V192.953C512,155.375,481.547,124.922,443.969,124.922z M318.125,343.5 c-2.5,5.156-6.141,9.625-10.906,13.359c-4.766,3.719-8.844,6.656-15.813,8.797c-5.5,1.656-12.406,2.672-18.875,3.016v19.484 h-17.422v-19.344h-15.797v19.344h-17.406v-19.344h-13.844h-17.906v-17.672c0-3.422-0.234-5.5,3.328-6.203 c0.313-0.063,0.766-0.141,1.328-0.234c0.594-0.109,7.547-0.531,9.125-0.531c2.813,0,4.125-2.656,4.125-5.313v-85.938 c0-3.219-1.75-4.5-4.125-4.828c-1.563-0.219-8.531-0.438-9.125-0.531c-0.563-0.109-1.016-0.172-1.328-0.234 c-3.563-0.719-3.328-2.781-3.328-6.203v-15.844h17.906h13.844v-19.797h17.406v19.859l15.797,0.031v-19.891h17.422v20.172 c9.406,0.797,21.031,3.75,29.016,9.953c4.484,3.469,7.953,7.313,10.109,12c2.125,4.703,3.188,10,3.188,15.891 c0,3.375-0.531,6.594-1.594,9.672s-2.719,5.953-4.969,8.641c-2.25,2.672-9.75,10.25-16.438,12.859 c20.438,3.563,29.984,15.078,30,31.953C321.844,332.719,320.609,338.359,318.125,343.5z"
+                              ></path>
+                            </g>
+                          </g>
+                        </svg>
+                      </span>
+                      <section class="schedule-headings">
+                        <span>Strategy Review For Day-Trading</span>
+                        <span class="progress"
+                          ><div class="dot"></div>
+                          In progress</span
+                        >
+                      </section>
+                      <span class="time-section">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M12 8V12L14 14M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 10.1599 20.4478 8.44877 19.5 7.02331"
+                              stroke="#000000"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </g>
+                        </svg>
+                        48h
+                      </span>
+                      <!-- </div> -->
+                    </li>
+
+                    <li>
+                      <span class="current-tasks">
+                        <svg
+                          version="1.1"
+                          id="_x32_"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          viewBox="0 0 512 512"
+                          xml:space="preserve"
+                          fill="#c0c0c0"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <style type="text/css">
+                              .st0 {
+                                fill: #373737;
+                              }
+                            </style>
+                            <g>
+                              <path
+                                class="st0"
+                                d="M181.891,76.906c0.016-8.656,3.469-16.344,9.125-22.031c5.688-5.672,13.375-9.125,22.031-9.125h90.391 c4.359,0,7.922,0.844,11,2.25c4.594,2.125,8.313,5.578,11.141,10.469c2.797,4.875,4.531,11.219,4.531,18.438v24.828h32V76.906 c0-16.391-5.234-31.984-15.484-43.828c-5.125-5.906-11.516-10.813-18.875-14.172c-7.359-3.375-15.641-5.172-24.313-5.156h-90.391 c-34.891,0-63.141,28.281-63.156,63.156v24.828h32V76.906z"
+                              ></path>
+                              <path
+                                class="st0"
+                                d="M275.781,314.891c-1.75-1.344-4-2.375-6.734-3.078c-2.734-0.719-6.047-1.078-9.938-1.078h-18.219v32.391 h18.297c4.125,0,7.563-0.469,10.313-1.375c2.781-0.922,4.984-2.141,6.656-3.672c1.656-1.516,2.875-3.297,3.625-5.344 c0.719-2.031,1.094-4.203,1.094-6.5c0-2.375-0.406-4.531-1.219-6.453C278.828,317.875,277.547,316.25,275.781,314.891z"
+                              ></path>
+                              <path
+                                class="st0"
+                                d="M270.25,278.828c3.906-2.547,5.844-6.609,5.844-12.156c0-5.75-1.75-9.844-5.266-12.281 c-3.516-2.453-8.984-3.688-16.438-3.688h-14.125v31.938h12.906C260.672,282.641,266.359,281.375,270.25,278.828z"
+                              ></path>
+                              <path
+                                class="st0"
+                                d="M443.969,124.922H68.031C30.469,124.922,0,155.375,0,192.953v199.938c0,37.563,30.453,68.016,68,68.031v17.328 c0,11.047,8.953,20,20,20s20-8.953,20-20v-17.328h296v17.328c0,11.047,8.953,20,20,20s20-8.953,20-20v-17.328 c37.563-0.016,68-30.469,68-68.031V192.953C512,155.375,481.547,124.922,443.969,124.922z M318.125,343.5 c-2.5,5.156-6.141,9.625-10.906,13.359c-4.766,3.719-8.844,6.656-15.813,8.797c-5.5,1.656-12.406,2.672-18.875,3.016v19.484 h-17.422v-19.344h-15.797v19.344h-17.406v-19.344h-13.844h-17.906v-17.672c0-3.422-0.234-5.5,3.328-6.203 c0.313-0.063,0.766-0.141,1.328-0.234c0.594-0.109,7.547-0.531,9.125-0.531c2.813,0,4.125-2.656,4.125-5.313v-85.938 c0-3.219-1.75-4.5-4.125-4.828c-1.563-0.219-8.531-0.438-9.125-0.531c-0.563-0.109-1.016-0.172-1.328-0.234 c-3.563-0.719-3.328-2.781-3.328-6.203v-15.844h17.906h13.844v-19.797h17.406v19.859l15.797,0.031v-19.891h17.422v20.172 c9.406,0.797,21.031,3.75,29.016,9.953c4.484,3.469,7.953,7.313,10.109,12c2.125,4.703,3.188,10,3.188,15.891 c0,3.375-0.531,6.594-1.594,9.672s-2.719,5.953-4.969,8.641c-2.25,2.672-9.75,10.25-16.438,12.859 c20.438,3.563,29.984,15.078,30,31.953C321.844,332.719,320.609,338.359,318.125,343.5z"
+                              ></path>
+                            </g>
+                          </g>
+                        </svg>
+                      </span>
+                      <section class="schedule-headings">
+                        <span>Strategy Review For Day-Trading</span>
+                        <span class="progress"
+                          ><div class="dot"></div>
+                          In progress</span
+                        >
+                      </section>
+                      <span class="time-section">
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M12 8V12L14 14M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 10.1599 20.4478 8.44877 19.5 7.02331"
+                              stroke="#000000"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </g>
+                        </svg>
+                        48h
+                      </span>
+                      <!-- </div> -->
+                    </li>
+                  </ul>
                 </div>
-                <div class="right-task-section"></div>
               </section>
             </div>
           </div>
