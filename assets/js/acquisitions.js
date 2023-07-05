@@ -51,24 +51,22 @@ const data = {
   labels: [
     "Speed",
     "Strength",
-    "Intelligence",
-    "Stamina",
-    "Durability",
-    "Leadership",
+    "Height",
+    "Intelligence"
   ],
   datasets: [
     {
       label: "Batman",
-      data: [9, 8, 7, 6, 5, 4],
+      data: [35, 10,18,15],
     },
     {
       label: "Superman",
-      data: [10, 9, 8, 7, 6, 5],
+      data: [25, 40,32,40],
     },
   ],
 };
 
 const chart = new Chart(document.getElementById("myChart"), {
-  type: "radar",
+  type: "polarArea",
   data,
 });

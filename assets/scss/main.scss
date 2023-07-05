@@ -17,8 +17,9 @@
 
   .left-section {
     height: 100vh;
-    max-width: 280px;
+    position: fixed;
     overflow: hidden;
+    max-width: 280px;
     overflow-y: scroll;
     color: #ffffffe0;
     background: #091334f0;
@@ -111,7 +112,8 @@
 }
 
 .right-section {
-  width: 85%;
+  width: 70%;
+  margin-left: 280px;
   nav {
     .navbar-toggler-icon {
       width: 1.6em;
@@ -235,7 +237,7 @@
   }
   //Summery
   .summery {
-    gap: 10px;
+    // gap: 10px;
     width: 100%;
     display: flex;
     margin: 0 auto;
@@ -245,84 +247,12 @@
     align-content: center;
     justify-content: space-around;
 
-    .h5-card-title {
-      display: flex;
-      font-size: 15px;
-      align-items: center;
-      flex-flow: wrap row;
-      align-content: center;
-      justify-content: space-between;
+    .tradingview-widget-container {
+      width: 100% !important;
+      height: max-content !important;
 
-      span {
-        width: 31px;
-        cursor: pointer;
-        text-align: center;
-        border-radius: 500px;
-        padding: 5px 0px 5px 0px;
-        transition: background 0.3s ease-in-out;
-
-        svg {
-          width: 22px;
-          height: 20px;
-        }
-      }
-      span:hover {
-        background: #00000026;
-        background-color: #00000026;
-      }
-    }
-
-    ul {
-      li {
-        margin: 0 0 18px 0;
-
-        h2 {
-          margin: 0;
-          padding: 0;
-          font-size: 55px;
-          font-weight: 500;
-        }
-        h4 {
-          font-size: 15px;
-          font-weight: 645;
-        }
-        h5 {
-          font-size: 16px;
-          font-weight: 500;
-          color: #00000099;
-        }
-      }
-    }
-    .first-ul {
-      h2 {
-        color: #3772f7d9;
-      }
-      h4 {
-        color: #3772f7d9;
-      }
-    }
-    .second-ul {
-      h2 {
-        color: #9ae971fa;
-      }
-      h4 {
-        color: #87cd63;
-      }
-    }
-    .third-ul {
-      h2 {
-        color: #f7da37d9;
-      }
-      h4 {
-        color: rgb(219 193 48 / 85%);
-      }
-    }
-    .fourth-ul {
-      h2 {
-        color: #f73737d9;
-      }
-      h4 {
-        color: #d52e2ed9;
+      iframe {
+        width: 100% !important;
       }
     }
   }
@@ -347,10 +277,10 @@
       }
     }
 
-    .graph-summery-wrapper{
+    .graph-summery-wrapper {
       max-width: 100%;
 
-      #myChartCanvas{
+      #myChartCanvas {
         width: 100% !important;
         max-width: 100%;
       }
@@ -390,7 +320,7 @@
         color: #34b7f5;
         background: #7cd5ff26;
         grid-area: closed-issues;
-        background-color : #7cd5ff26;
+        background-color: #7cd5ff26;
       }
       .fixedIssues {
         grid-area: fixed-issues;
@@ -406,6 +336,95 @@
       }
     }
   }
+
+  .myGraphs{
+    iframe{
+      height: 70vh !important;
+    }
+  }
+
+  // task section
+  .task-graph {
+    // padding: 20px;
+
+    .task-section {
+      .task-nav {
+        display: flex;
+        flex-flow: wrap row;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+
+        h3 {
+          font-size: 18px;
+        }
+        span {
+          button {
+            --bs-btn-padding-y: 0.17rem;
+          }
+        }
+      }
+      .inner-task-graph {
+        width: 100%;
+        text-align: center;
+        background: #fff;
+        background-color: #fff;
+
+        .myChartGraph {
+          width: 50%;
+          margin: 0 auto;
+        }
+        .task-distribution {
+          display: flex;
+          .new-tasks {
+            width: 50%;
+          }
+          .completed-tasks {
+            width: 50%;
+          }
+        }
+      }
+      .Schedule {
+        padding: 20px;
+        background: #fff;
+        border-radius: 21px;
+        background-color: #fff;
+
+        .group-meeting {
+          width: 100%;
+          display: flex;
+          font-size: 20px;
+          flex-flow: wrap row;
+          justify-content: space-between;
+        }
+
+        ul {
+          li {
+            h3 {
+              font-size: 17px;
+              font-weight: 600;
+            }
+            .meeting-min {
+              display: flex;
+              flex-flow: wrap row;
+              justify-content: space-between;
+              align-content: center;
+              align-items: center;
+
+              .schedule-headings {
+                gap: 15px;
+                display: flex;
+                font-size: 15px;
+              }
+              span svg {
+                width: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // media Queries
@@ -413,5 +432,13 @@
   .col-lg-2 {
     flex: 0 0 auto;
     width: 24%;
+  }
+}
+
+@media (min-width: 576px) {
+  .summery{
+    .col-sm-5 {
+      width: 49.667% !important;
+    }
   }
 }
