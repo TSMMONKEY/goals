@@ -17,7 +17,8 @@
   padding-right: 0;
 }
 .main-container .left-section {
-  height: 100vh;
+  z-index: 1;
+  height: 100%;
   position: fixed;
   overflow: hidden;
   max-width: 280px;
@@ -28,7 +29,7 @@
 .main-container .left-section .nav .first-nav-section {
   width: 100%;
   display: flex;
-  padding: 20px 10px;
+  padding: 5px 20px 10px;
   flex-flow: wrap row;
   align-items: center;
   align-content: space-between;
@@ -102,12 +103,13 @@
 }
 
 .right-section {
-  width: 70%;
+  width: 100%;
   margin-left: 280px;
 }
 .right-section nav .navbar-toggler-icon {
   width: 1.6em;
   height: 1.6em;
+  cursor: pointer;
 }
 .right-section nav .right-nav-section {
   gap: 15px;
@@ -126,7 +128,7 @@
   gap: 15px;
   width: 100%;
   display: flex;
-  padding: 55px 12px;
+  padding: 25px 12px;
   flex-flow: wrap row;
   align-items: center;
   justify-content: space-between;
@@ -226,7 +228,7 @@
 .right-section .graph-section {
   background: #fff;
   padding: 20px;
-  margin: 18px 0 0 0;
+  margin: 0 10px 0 0;
   border-radius: 10px;
   background-color: #fff;
 }
@@ -293,8 +295,27 @@
 .right-section .graph-section .right-graph-section .revaluateIssues {
   grid-area: evaluate-issues;
 }
+.right-section #trading-sector iframe {
+  height: 60vh !important;
+}
+.right-section .myGraphs {
+  width: 100% !important;
+}
 .right-section .myGraphs iframe {
-  height: 70vh !important;
+  width: 100% !important;
+  height: 26em !important;
+}
+.right-section .task-graph {
+  width: 40.2%;
+  background: #fff;
+  padding: 20px;
+  margin: 0;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.right-section .task-graph iframe {
+  width: 100% !important;
+  height: 32em !important;
 }
 .right-section .task-graph .task-section .task-nav {
   display: flex;
@@ -328,48 +349,223 @@
 .right-section .task-graph .task-section .inner-task-graph .task-distribution .completed-tasks {
   width: 50%;
 }
-.right-section .task-graph .task-section .Schedule {
+.right-section .Schedule {
   padding: 20px;
   background: #fff;
   border-radius: 21px;
   background-color: #fff;
 }
-.right-section .task-graph .task-section .Schedule .group-meeting {
+.right-section .Schedule .tradingview-widget-container {
+  width: 100% !important;
+}
+.right-section .Schedule .tradingview-widget-container iframe {
+  width: 100% !important;
+}
+.right-section .Schedule .group-meeting {
   width: 100%;
   display: flex;
   font-size: 20px;
+  align-items: center;
   flex-flow: wrap row;
   justify-content: space-between;
 }
-.right-section .task-graph .task-section .Schedule ul li h3 {
-  font-size: 17px;
-  font-weight: 600;
+.right-section .Schedule ul li {
+  display: flex;
+  margin: 8px 0;
+  padding: 31px 0;
+  align-items: center;
+  background: rgba(201, 201, 201, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(201, 201, 201, 0.3);
+  justify-content: space-around;
+  background-blend-mode: color;
 }
-.right-section .task-graph .task-section .Schedule ul li .meeting-min {
+.right-section .Schedule ul li .current-tasks {
+  left: 6px;
+  width: 38px;
+  height: 37px;
+  padding: 11px;
+  display: flex;
+  position: absolute;
+  border-radius: 50%;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background: rgba(236, 184, 184, 0.4392156863);
+  background-color: rgba(236, 184, 184, 0.4392156863);
+}
+.right-section .Schedule ul li .current-tasks svg {
+  width: 100%;
+}
+.right-section .Schedule ul li span {
+  font-size: 21px;
+}
+.right-section .Schedule ul li svg {
+  width: 14px;
+}
+.right-section .Schedule ul .meeting-min {
+  gap: 75px;
   display: flex;
   flex-flow: wrap row;
   justify-content: space-between;
   align-content: center;
   align-items: center;
 }
-.right-section .task-graph .task-section .Schedule ul li .meeting-min .schedule-headings {
-  gap: 15px;
+.right-section .Schedule ul .meeting-min span {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 2px 0 0 0;
+}
+.right-section .Schedule ul .meeting-min span svg {
+  width: 19px;
+  margin: 0px 3px 3px 0;
+}
+.right-section .Schedule ul .schedule-headings {
+  gap: 94px;
+  left: 62px;
   display: flex;
   font-size: 15px;
+  margin-left: -5px;
+  position: absolute;
+  align-content: center;
+  align-items: center;
 }
-.right-section .task-graph .task-section .Schedule ul li .meeting-min span svg {
-  width: 25px;
+.right-section .Schedule ul .schedule-headings span {
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  width: 236px;
+}
+.right-section .Schedule ul .progress {
+  gap: 7px;
+  right: 13%;
+  width: 114px;
+  padding: 15px;
+  display: flex;
+  font-size: 13px;
+  position: absolute;
+  background: #fff;
+  align-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+.right-section .Schedule ul .progress .dot {
+  background: #ff7d0b;
+  padding: 2px;
+  width: 9px;
+  border-radius: 536px;
+  height: 9px;
+}
+.right-section .Schedule ul .time-section {
+  left: 89%;
+  display: flex;
+  font-size: 17px;
+  font-weight: 600;
+  position: absolute;
+  align-items: center;
 }
 
-@media (min-width: 992px) {
+#second-Schedule {
+  width: 40.2%;
+  margin-right: 0;
+}
+#second-Schedule ul {
+  text-transform: capitalize;
+}
+
+@media only screen and (min-width: 992px) {
   .col-lg-2 {
     flex: 0 0 auto;
     width: 24%;
   }
+  nav {
+    padding: 25px !important;
+  }
+  .right-nav-section {
+    right: 11px !important;
+    position: absolute !important;
+  }
+  .navbar-toggler-icon {
+    display: none !important;
+  }
+  .hideToggler {
+    display: none;
+  }
 }
-@media (min-width: 576px) {
+@media only screen and (max-width: 992px) {
+  .left-section {
+    display: none;
+  }
+  .right-section {
+    margin-left: 0 !important;
+  }
+  .inner-left-section {
+    width: 100% !important;
+  }
+}
+@media only screen and (min-width: 576px) {
   .summery .col-sm-5 {
     width: 49.667% !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #schedule-section {
+    flex-wrap: wrap !important;
+    flex-direction: column !important;
+  }
+}
+@media only screen and (min-width: 600px) {
+  #schedule-section {
+    flex-wrap: wrap;
+    flex-direction: row !important;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .schedule-headings span {
+    width: 118px !important;
+  }
+  .schedule-headings .progress {
+    right: -135px !important;
+  }
+}
+@media only screen and (min-width: 750px) and (max-width: 1713px) {
+  .schedule-headings span {
+    width: 118px !important;
+  }
+  .progress {
+    font-size: 12px !important;
+    width: 109px !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .graph-section-flex {
+    flex-wrap: wrap !important;
+    flex-direction: column !important;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .graph-section-flex {
+    flex-wrap: wrap;
+    flex-direction: row !important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  #second-Schedule {
+    width: 100% !important;
+  }
+}
+@media only screen and (max-width: 992px) and (max-width: 992px) {
+  .task-graph {
+    width: 100% !important;
+    height: 60vh;
+  }
+  .task-graph iframe {
+    height: 60vh !important;
   }
 }
 
